@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hérmiton Oliveira Freitas — Currículo</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#050816;font-family:'Inter',sans-serif;color:#AAB3C5;font-weight:400;line-height:1.6;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;z-index:-2;pointer-events:none;
+background:radial-gradient(900px 420px at 72% 18%,rgba(255,120,180,.14) 0%,transparent 42%),
+radial-gradient(800px 380px at 35% 20%,rgba(35,110,255,.14) 0%,transparent 42%),
+linear-gradient(180deg,#0A0F24 0%,#070B1D 45%,#050816 100%)}
+body::after{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.3;
+background-image:radial-gradient(rgba(255,255,255,.06) .8px,transparent .8px);background-size:24px 24px}
+h1,h2,h3{color:#F5F7FB}
+h1{font-weight:900;letter-spacing:-.03em;line-height:1.08}
+h2{font-weight:800;letter-spacing:-.025em;line-height:1.12}
+h3{font-weight:700;letter-spacing:-.015em}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:1000;
+background:linear-gradient(90deg,#2E6BFF,#C86DD7,#2E6BFF);background-size:200% auto;
+animation:shimmer 3s linear infinite;transition:width .2s ease}
+@keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+.gt{background:linear-gradient(135deg,#2E6BFF 0%,#C86DD7 50%,#2E6BFF 100%);background-size:200% auto;
+-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+animation:shimmer 4s linear infinite}
+.gl{width:72px;height:4px;border-radius:2px;background:linear-gradient(90deg,#2E6BFF,#C86DD7);
+margin-bottom:22px;transform-origin:left}
+.gl.ce{margin:0 auto 22px;transform-origin:center}
+.badge{display:inline-flex;align-items:center;gap:10px;padding:8px 20px;border-radius:999px;
+background:rgba(46,107,255,.08);border:1px solid rgba(46,107,255,.2);font-size:13px;font-weight:600;
+color:#8FAEFF;letter-spacing:.05em;text-transform:uppercase}
+.toc{position:fixed;left:0;top:0;bottom:0;width:240px;padding:32px 24px 24px;background:rgba(5,8,22,.6);
+backdrop-filter:blur(12px);border-right:1px solid rgba(255,255,255,.05);z-index:100;overflow-y:auto}
+.toc .toc-brand{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7E879B;margin-bottom:6px}
+.toc .toc-name{font-size:16px;font-weight:800;margin-bottom:28px;letter-spacing:-.01em;
+background:linear-gradient(135deg,#2E6BFF,#C86DD7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.toc ul{list-style:none}.toc li{margin-bottom:8px}
+.toc a{display:block;padding:8px 14px;border-radius:10px;color:#AAB3C5;font-size:14px;font-weight:500;
+text-decoration:none;transition:all .3s ease;border-left:2px solid transparent}
+.toc a:hover{color:#F5F7FB;background:rgba(255,255,255,.03)}
+.toc a.active{color:#8FAEFF;background:rgba(46,107,255,.08);border-left-color:#2E6BFF}
+@media(max-width:900px){.toc{position:sticky;top:0;left:auto;width:100%;height:auto;padding:16px 20px;
+display:flex;align-items:center;gap:16px;overflow-x:auto;border-right:none;border-bottom:1px solid rgba(255,255,255,.05)}
+.toc ul{display:flex;gap:6px}.toc li{margin:0}}
+.content{margin-left:calc(240px + max(0px,(100vw - 240px - 1100px)/2));padding:80px 64px 120px;max-width:1100px}
+@media(max-width:900px){.content{margin-left:0;padding:40px 24px 80px;max-width:100%}}
+section{margin-bottom:90px;scroll-margin-top:40px}
+section h2{font-size:clamp(32px,4.5vw,48px);margin-bottom:32px}
+#hero{min-height:70vh;display:flex;flex-direction:column;justify-content:center;text-align:center;padding:40px 0}
+#hero h1{font-size:clamp(40px,6vw,72px);margin-bottom:20px}
+#hero .hero-title{font-size:clamp(18px,2.2vw,24px);color:#AAB3C5;margin-bottom:16px;font-weight:500}
+#hero .hero-tagline{font-size:clamp(15px,1.6vw,18px);color:#7E879B;max-width:600px;margin:0 auto 24px;line-height:1.5}
+#hero .hero-loc{font-size:14px;color:#7E879B;letter-spacing:.05em;margin-top:16px}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:24px;max-width:780px;margin:44px auto 0}
+.stat-big{font-size:44px;font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:8px;display:inline-block}
+.stat-big.blue{color:#2E6BFF}.stat-big.purple{color:#5B3FD6}.stat-big.pink{color:#C86DD7}.stat-big.green{color:#5EE89A}
+.stat-label{font-size:12px;color:#7E879B;letter-spacing:.05em;text-transform:uppercase;font-weight:600}
+.card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:20px;
+box-shadow:0 16px 48px rgba(0,0,0,.4);padding:28px 26px;backdrop-filter:blur(8px);
+transition:transform .4s ease,border-color .3s ease}
+.card:hover{border-color:rgba(46,107,255,.25);transform:translateY(-4px)}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.sp-card .sp-ic{width:44px;height:44px;border-radius:12px;background:rgba(46,107,255,.1);
+display:flex;align-items:center;justify-content:center;margin-bottom:14px;font-size:20px}
+.sp-card h3{font-size:18px;margin-bottom:8px}
+.sp-card p{font-size:13.5px;color:#AAB3C5}
+.case-card{padding:28px 26px;display:flex;flex-direction:column;gap:10px}
+.case-card .case-title{font-size:17px;font-weight:700;color:#F5F7FB}
+.case-card .case-ctx{font-size:13.5px;color:#AAB3C5;line-height:1.5}
+.case-card .case-res{font-size:13px;color:#5EE89A;font-weight:600}
+.tl{position:relative;padding-left:36px}
+.tl::before{content:'';position:absolute;left:11px;top:0;bottom:0;width:2px;
+background:linear-gradient(180deg,#2E6BFF 0%,#5B3FD6 50%,#C86DD7 100%);opacity:.3}
+.tl-item{position:relative;margin-bottom:32px}
+.tl-item::before{content:'';position:absolute;left:-31px;top:6px;width:13px;height:13px;border-radius:50%;
+background:#2E6BFF;box-shadow:0 0 12px rgba(46,107,255,.6),0 0 0 4px rgba(5,8,22,1)}
+.tl-item .tl-period{font-size:11.5px;font-weight:700;color:#7E879B;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.tl-item .tl-role{font-size:18px;font-weight:700;color:#F5F7FB;margin-bottom:3px}
+.tl-item .tl-company{font-size:14px;color:#8FAEFF;font-weight:600;margin-bottom:10px}
+.tl-item ul{list-style:none;margin-top:8px}
+.tl-item ul li{position:relative;padding-left:16px;margin-bottom:7px;color:#AAB3C5;font-size:13.5px}
+.tl-item ul li::before{content:'';position:absolute;left:0;top:8px;width:5px;height:5px;border-radius:50%;background:rgba(200,109,215,.6)}
+.pill{display:inline-flex;align-items:center;padding:6px 13px;border-radius:999px;background:rgba(255,255,255,.04);
+border:1px solid rgba(255,255,255,.08);color:#AAB3C5;font-size:12.5px;font-weight:500;margin:4px 6px 4px 0}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.contact-card{padding:20px 22px;display:flex;align-items:center;gap:14px;min-width:0}
+.contact-card .ct-ic{width:38px;height:38px;border-radius:11px;background:rgba(46,107,255,.1);
+display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:17px}
+.contact-card .ct-info{min-width:0;flex:1}
+.contact-card .ct-lbl{font-size:10.5px;color:#7E879B;letter-spacing:.1em;text-transform:uppercase;font-weight:700;margin-bottom:4px}
+.contact-card .ct-val{font-size:13px;color:#F5F7FB;font-weight:600;overflow-wrap:anywhere;line-height:1.4}
+.contact-card .ct-val a{color:#F5F7FB;text-decoration:none}
+.contact-card .ct-val a:hover{color:#8FAEFF}
+.fs-btn,.print-btn{position:fixed;z-index:999;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
+color:#7E879B;padding:10px 16px;border-radius:12px;cursor:pointer;font-family:'Inter',sans-serif;font-size:11px;font-weight:600;
+display:flex;align-items:center;gap:6px;letter-spacing:.04em;text-transform:uppercase}
+.fs-btn{top:20px;right:20px}.print-btn{top:20px;right:140px}
+.fs-btn:hover,.print-btn:hover{background:rgba(255,255,255,.08);color:#F5F7FB}
+
+/* === PRINT: compacto, sólido, sem bugs === */
+@media print{
+  body::before,body::after{display:none}
+  body{background:#fff!important;color:#222!important}
+  .toc,.fs-btn,.print-btn,.progress{display:none!important}
+  .content{margin-left:0!important;padding:14px 20px!important;max-width:100%!important}
+  section{margin-bottom:18px!important;page-break-inside:avoid}
+  h1,h2,h3{color:#111!important}
+  h1{font-size:26px!important}
+  h2{font-size:18px!important;margin-bottom:10px!important}
+  #hero{min-height:auto!important;padding:6px 0!important}
+  #hero h1{font-size:26px!important}
+  #hero .hero-title{font-size:14px!important;color:#333!important}
+  #hero .hero-tagline{font-size:11.5px!important;color:#555!important}
+  .gt{background:none!important;-webkit-text-fill-color:#111!important;color:#111!important;animation:none!important}
+  .stats-grid{gap:10px!important;margin:16px auto 0!important}
+  .stat-big{font-size:22px!important;color:#2E6BFF!important;-webkit-text-fill-color:#2E6BFF!important}
+  .stat-label{font-size:9px!important;color:#555!important}
+  .card,.sp-card,.case-card,.contact-card{background:#f7f7f9!important;border:1px solid #ddd!important;
+    box-shadow:none!important;padding:12px 14px!important;transform:none!important}
+  .grid3{gap:10px!important}
+  .sp-card .sp-ic,.contact-card .ct-ic{width:26px!important;height:26px!important;font-size:13px!important;margin-bottom:6px!important}
+  .sp-card h3{font-size:13px!important}
+  .sp-card p,.case-card p,.case-card .case-ctx{font-size:10.5px!important;color:#444!important}
+  .tl-item .tl-role{font-size:14px!important}
+  .tl-item .tl-company{font-size:11.5px!important;color:#2E6BFF!important}
+  .tl-item ul li{font-size:10.5px!important;color:#333!important}
+  .badge{font-size:9px!important;padding:4px 10px!important}
+  p,span,li{color:#333!important}
+  .gl{display:none}
+}
+</style>
+</head>
+<body>
+<div class="progress" id="prog"></div>
+
+<aside class="toc">
+  <div class="toc-brand">Currículo</div>
+  <div class="toc-name">Hérmiton O. Freitas</div>
+  <ul>
+    <li><a href="#hero">Início</a></li>
+    <li><a href="#manifesto">Manifesto</a></li>
+    <li><a href="#cases">Cases</a></li>
+    <li><a href="#trajetoria">Trajetória</a></li>
+    <li><a href="#superpoderes">Superpoderes</a></li>
+    <li><a href="#formacao">Formação</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+</aside>
+
+<main class="content">
+
+<section id="hero">
+  <div class="badge">EDUCAÇÃO · FILOSOFIA · LETRAS · INOVAÇÃO PEDAGÓGICA</div>
+  <h1 style="margin-top:20px">Hérmiton Oliveira <span class="gt">Freitas</span></h1>
+  <p class="hero-title">Professor de História, Filosofia, Sociologia e Língua Portuguesa</p>
+  <p class="hero-tagline">Mais de 20 anos formando pensamento crítico e cidadania por meio da educação inovadora e humanizadora.</p>
+  <div class="stats-grid">
+    <div><div class="stat-big blue">20+</div><div class="stat-label">Anos de Docência</div></div>
+    <div><div class="stat-big purple">980h</div><div class="stat-label">Formação em EdTech</div></div>
+    <div><div class="stat-big pink">5</div><div class="stat-label">Idiomas</div></div>
+    <div><div class="stat-big green">6</div><div class="stat-label">Instituições de Ensino</div></div>
+  </div>
+  <p class="hero-loc">São Bernardo do Campo – SP, Brasil</p>
+</section>
+
+<section id="manifesto" style="text-align:center;padding:20px 0 40px">
+  <div class="gl ce"></div>
+  <p style="font-size:clamp(20px,2.6vw,28px);font-weight:500;font-style:italic;color:#F5F7FB;max-width:760px;margin:0 auto;line-height:1.4">
+    "Acredito numa educação que transforma quem ensina e quem aprende, unindo tradição filosófica, inovação pedagógica e cultura de paz."
+  </p>
+  <div style="margin-top:20px;font-size:13px;color:#7E879B;letter-spacing:.08em;text-transform:uppercase;font-weight:600">— Hérmiton</div>
+</section>
+<section id="cases">
+  <h2>Cases <span class="gt">de Impacto</span></h2>
+  <div class="gl"></div>
+  <div class="grid3">
+    <div class="card case-card">
+      <div class="case-title">Sarau Músico-Literário-Artístico</div>
+      <div class="case-ctx">Coordenação de protagonismo juvenil, unindo música, poesia e artes.</div>
+      <div class="case-res">Criação de estúdio de música e podcast</div>
+    </div>
+    <div class="card case-card">
+      <div class="case-title">Projeto Encontros Autorais</div>
+      <div class="case-ctx">Mentoria de escrita criativa e produção textual dos estudantes.</div>
+      <div class="case-res">Publicação de livros autorais</div>
+    </div>
+    <div class="card case-card">
+      <div class="case-title">Livro Gigante (formato A1)</div>
+      <div class="case-ctx">Coautoria entre estudantes unindo poesia e ilustração em grande formato.</div>
+      <div class="case-res">Produção editorial coletiva</div>
+    </div>
+    <div class="card case-card">
+      <div class="case-title">Sexta de Jogos + Coleta Seletiva</div>
+      <div class="case-ctx">Gamificação com materiais recicláveis, em parceria com a Prefeitura de SBC.</div>
+      <div class="case-res">Cultura Maker aplicada à sustentabilidade</div>
+    </div>
+  </div>
+</section>
+
+<section id="trajetoria">
+  <h2>Trajetória <span class="gt">Profissional</span></h2>
+  <div class="gl"></div>
+  <div class="tl">
+    <div class="tl-item">
+      <div class="tl-period">2026 – Atual</div>
+      <div class="tl-role">Professor de História</div>
+      <div class="tl-company">Instituto Educacional Barão de Mauá (IEBURIX)</div>
+      <ul>
+        <li>Docência do componente curricular de História na Educação Básica, com metodologias ativas conectando fatos históricos à análise crítica da sociedade contemporânea.</li>
+        <li>Planejamentos dinâmicos que incentivam o protagonismo estudantil e a reflexão interdisciplinar humanística.</li>
+      </ul>
+    </div>
+    <div class="tl-item">
+      <div class="tl-period">2024 – 2025</div>
+      <div class="tl-role">Professor Articulador e Docente</div>
+      <div class="tl-company">EE Dr. Francisco Emygdio (PEI)</div>
+      <ul>
+        <li>Coordenação de Sarau Músico-Literário-Artístico e Encontros Autorais, com criação de estúdio de podcast e publicação de livros.</li>
+        <li>Coordenação do Projeto Livro Gigante (A1), integrando poesia e ilustração em coautoria.</li>
+        <li>Implementação da "Sexta de Jogos" com Cultura Maker e Coleta Seletiva (parceria com a Prefeitura de SBC).</li>
+        <li>Docência de Filosofia, Sociologia e História (Ensino Médio); Eletivas Escola Verde, Engenhando o Mundo e Tecnologia e Inovação (Fundamental).</li>
+      </ul>
+    </div>
+    <div class="tl-item">
+      <div class="tl-period">2023</div>
+      <div class="tl-role">Professor de Antropologia Filosófica</div>
+      <div class="tl-company">Faculdade Santa Marcelina (FASM)</div>
+      <ul>
+        <li>Professor-Tutor em modalidade híbrida para Música, Enfermagem, Artes Visuais e Moda, conectando ética e antropologia às práticas profissionais.</li>
+      </ul>
+    </div>
+    <div class="tl-item">
+      <div class="tl-period">2009 – 2023</div>
+      <div class="tl-role">Docente e Articulador</div>
+      <div class="tl-company">Rede Metodista (UMESP / Colégio Metodista)</div>
+      <ul>
+        <li>Docência multimodal (presencial e EAD), atuando em AVA e produção de materiais curriculares para o ensino superior.</li>
+        <li>Desenvolvimento de conteúdos de Ética, Cidadania e Direitos Humanos.</li>
+        <li>Idealizador dos Encontros de Professores de Filosofia do Grande ABC Paulista.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="superpoderes">
+  <h2>Super<span class="gt">poderes</span></h2>
+  <div class="gl"></div>
+  <div class="grid3">
+    <div class="card sp-card">
+      <div class="sp-ic">🎓</div>
+      <h3>Docência Interdisciplinar</h3>
+      <p>História, Filosofia e Sociologia com formação crítica e cidadã.</p>
+    </div>
+    <div class="card sp-card">
+      <div class="sp-ic">💡</div>
+      <h3>EdTech &amp; Cultura Maker</h3>
+      <p>980h de formação em metodologias ativas e "aprender fazendo".</p>
+    </div>
+    <div class="card sp-card">
+      <div class="sp-ic">✍️</div>
+      <h3>Projetos Autorais</h3>
+      <p>Saraus, podcasts e livros com produções autorais de estudantes.</p>
+    </div>
+    <div class="card sp-card">
+      <div class="sp-ic">🌱</div>
+      <h3>ESG &amp; Sustentabilidade</h3>
+      <p>Parcerias institucionais e coleta seletiva com a governança municipal.</p>
+    </div>
+  </div>
+</section>
+
+<section id="formacao">
+  <h2>Formação <span class="gt">Acadêmica</span></h2>
+  <div class="gl"></div>
+  <div class="grid3">
+    <div class="card">
+      <h3>Especialização em História, Ciência, Ensino e Sociedade</h3>
+      <p>UFABC — Conclusão em 2026</p>
+    </div>
+    <div class="card">
+      <h3>Licenciatura em Letras (Português-Espanhol)</h3>
+      <p>Uni-Única — Conclusão em 2026</p>
+    </div>
+    <div class="card">
+      <h3>Especialização em Ciências da Religião</h3>
+      <p>UMESP — Concluído em 2018</p>
+    </div>
+    <div class="card">
+      <h3>Especialização em História e Filosofia da Ciência e da Tecnologia</h3>
+      <p>UFABC — Concluído em 2011</p>
+    </div>
+    <div class="card">
+      <h3>Licenciatura em Filosofia</h3>
+      <p>UMESP — Concluído em 2008</p>
+    </div>
+    <div class="card">
+      <h3>Bacharelado em Teologia</h3>
+      <p>UMESP — Concluído em 2003</p>
+    </div>
+  </div>
+  <div style="margin-top:32px" class="card">
+    <h3>Programa de Aperfeiçoamento em Inovação e Tecnologias Educacionais</h3>
+    <p style="margin-top:6px">UFCE/Sobral — 980h (2021–2024)</p>
+    <div style="margin-top:12px">
+      <span class="pill">Metodologias Ativas</span>
+      <span class="pill">Letramento Digital</span>
+      <span class="pill">Justiça Restaurativa</span>
+      <span class="pill">Comunicação Não-Violenta</span>
+      <span class="pill">Sustentabilidade Curricular</span>
+    </div>
+  </div>
+</section>
+
+<section id="contato">
+  <h2>Contato</h2>
+  <div class="gl"></div>
+  <div class="contact-grid">
+    <div class="card contact-card">
+      <div class="ct-ic">📞</div>
+      <div class="ct-info">
+        <div class="ct-lbl">Celular</div>
+        <div class="ct-val"><a href="tel:+5511953917929">(11) 95391-7929</a></div>
+      </div>
+    </div>
+    <div class="card contact-card">
+      <div class="ct-ic">✉️</div>
+      <div class="ct-info">
+        <div class="ct-lbl">E-mail</div>
+        <div class="ct-val"><a href="mailto:hermitonfreitas@hotmail.com">hermitonfreitas@hotmail.com</a></div>
+      </div>
+    </div>
+    <div class="card contact-card">
+      <div class="ct-ic">📍</div>
+      <div class="ct-info">
+        <div class="ct-lbl">Localização</div>
+        <div class="ct-val">São Bernardo do Campo, São Paulo</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<button class="print-btn" onclick="doPrint()">🖨️ Imprimir</button>
+<button class="fs-btn" onclick="toggleFs()">⛶ Tela cheia</button>
+
+<script>
+const prog=document.getElementById('prog');
+window.addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  const pct=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;
+  prog.style.width=pct+'%';
+});
+const sections=document.querySelectorAll('section[id]');
+const tocLinks=document.querySelectorAll('.toc a');
+const obs=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const id=e.target.id;
+      tocLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+id));
+    }
+  });
+},{rootMargin:'-40% 0px -40% 0px'});
+sections.forEach(s=>obs.observe(s));
+tocLinks.forEach(a=>{
+  a.addEventListener('click',(e)=>{
+    e.preventDefault();
+    const target=document.querySelector(a.getAttribute('href'));
+    if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+function toggleFs(){
+  if(!document.fullscreenElement){document.documentElement.requestFullscreen().catch(()=>{});}
+  else{document.exitFullscreen();}
+}
+function doPrint(){window.print();}
+</script>
+</body>
+</html>
