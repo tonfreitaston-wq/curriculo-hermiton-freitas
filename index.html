@@ -53,6 +53,18 @@ section h2{font-size:clamp(32px,4.5vw,48px);margin-bottom:32px}
 #hero .hero-title{font-size:clamp(18px,2.2vw,24px);color:#AAB3C5;margin-bottom:16px;font-weight:500}
 #hero .hero-tagline{font-size:clamp(15px,1.6vw,18px);color:#7E879B;max-width:600px;margin:0 auto 24px;line-height:1.5}
 #hero .hero-loc{font-size:14px;color:#7E879B;letter-spacing:.05em;margin-top:16px}
+
+.photo-ring{position:relative;width:220px;height:220px;margin:0 auto 28px;display:flex;align-items:center;justify-content:center}
+.photo-ring .ring{position:absolute;border-radius:50%;border:1px solid rgba(46,107,255,.18);animation:pulse 5s ease-in-out infinite}
+.photo-ring .ring:nth-child(1){width:170px;height:170px}
+.photo-ring .ring:nth-child(2){width:200px;height:200px;animation-delay:.6s;border-color:rgba(200,109,215,.16)}
+.photo-ring .ring:nth-child(3){width:230px;height:230px;animation-delay:1.2s}
+.photo-ring .photo{width:150px;height:150px;border-radius:50%;overflow:hidden;position:relative;z-index:2;
+box-shadow:0 20px 50px rgba(46,107,255,.35),0 0 60px rgba(200,109,215,.2)}
+.photo-ring .photo img{width:100%;height:100%;object-fit:cover;filter:url(#duotone) contrast(1.05) brightness(1.02);transition:filter .6s ease}
+.photo-ring:hover .photo img{filter:none}
+@keyframes pulse{0%,100%{opacity:.3;transform:scale(1)}50%{opacity:.7;transform:scale(1.04)}}
+
 .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:24px;max-width:780px;margin:44px auto 0}
 .stat-big{font-size:44px;font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:8px;display:inline-block}
 .stat-big.blue{color:#2E6BFF}.stat-big.purple{color:#5B3FD6}.stat-big.pink{color:#C86DD7}.stat-big.green{color:#5EE89A}
@@ -99,7 +111,6 @@ display:flex;align-items:center;gap:6px;letter-spacing:.04em;text-transform:uppe
 .fs-btn{top:20px;right:20px}.print-btn{top:20px;right:140px}
 .fs-btn:hover,.print-btn:hover{background:rgba(255,255,255,.08);color:#F5F7FB}
 
-/* === PRINT: compacto, sólido, sem bugs === */
 @media print{
   body::before,body::after{display:none}
   body{background:#fff!important;color:#222!important}
@@ -113,6 +124,9 @@ display:flex;align-items:center;gap:6px;letter-spacing:.04em;text-transform:uppe
   #hero h1{font-size:26px!important}
   #hero .hero-title{font-size:14px!important;color:#333!important}
   #hero .hero-tagline{font-size:11.5px!important;color:#555!important}
+  .photo-ring .ring{display:none}
+  .photo-ring{width:100px;height:100px;margin-bottom:14px}
+  .photo-ring .photo{width:90px;height:90px}
   .gt{background:none!important;-webkit-text-fill-color:#111!important;color:#111!important;animation:none!important}
   .stats-grid{gap:10px!important;margin:16px auto 0!important}
   .stat-big{font-size:22px!important;color:#2E6BFF!important;-webkit-text-fill-color:#2E6BFF!important}
@@ -133,6 +147,20 @@ display:flex;align-items:center;gap:6px;letter-spacing:.04em;text-transform:uppe
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute">
+  <filter id="duotone">
+    <feColorMatrix type="matrix" values=".33 .33 .33 0 0
+                                         .33 .33 .33 0 0
+                                         .33 .33 .33 0 0
+                                         0 0 0 1 0"/>
+    <feComponentTransfer color-interpolation-filters="sRGB">
+      <feFuncR tableValues="0.18 0.78"/>
+      <feFuncG tableValues="0.12 0.43"/>
+      <feFuncB tableValues="0.35 0.84"/>
+    </feComponentTransfer>
+  </filter>
+</svg>
+
 <div class="progress" id="prog"></div>
 
 <aside class="toc">
@@ -152,6 +180,12 @@ display:flex;align-items:center;gap:6px;letter-spacing:.04em;text-transform:uppe
 <main class="content">
 
 <section id="hero">
+  <div class="photo-ring">
+    <div class="ring"></div><div class="ring"></div><div class="ring"></div>
+    <div class="photo">
+      <img src="https://i.postimg.cc/nzrtrSGq/eu.jpg" alt="Hérmiton Oliveira Freitas">
+    </div>
+  </div>
   <div class="badge">EDUCAÇÃO · FILOSOFIA · LETRAS · INOVAÇÃO PEDAGÓGICA</div>
   <h1 style="margin-top:20px">Hérmiton Oliveira <span class="gt">Freitas</span></h1>
   <p class="hero-title">Professor de História, Filosofia, Sociologia e Língua Portuguesa</p>
@@ -172,6 +206,7 @@ display:flex;align-items:center;gap:6px;letter-spacing:.04em;text-transform:uppe
   </p>
   <div style="margin-top:20px;font-size:13px;color:#7E879B;letter-spacing:.08em;text-transform:uppercase;font-weight:600">— Hérmiton</div>
 </section>
+
 <section id="cases">
   <h2>Cases <span class="gt">de Impacto</span></h2>
   <div class="gl"></div>
